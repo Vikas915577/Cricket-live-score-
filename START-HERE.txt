@@ -1,0 +1,25 @@
+CRICKET LIVE SCORE V4 — API SETUP
+
+1) Free API key lo:
+   https://cricketliveapi.com/register
+
+2) Apni key ko server environment me set karo.
+   Linux / Mac:
+   export CRICLIVE_API_KEY="YOUR_KEY"
+
+   Windows PowerShell:
+   $env:CRICLIVE_API_KEY="YOUR_KEY"
+
+3) App run karo:
+   npm start
+
+4) Browser me kholo:
+   http://localhost:8080
+
+IMPORTANT:
+- Real API key ko app.js me mat daalna.
+- GitHub repo me real key commit mat karna.
+- Vercel use karoge to Environment Variable me CRICLIVE_API_KEY add karo.
+- Free tier ka quota provider ke account/key par hota hai.
+
+Agar key configure nahi hogi to app crash nahi karega; demo data dikhega aur "Demo / Offline" status show hoga.

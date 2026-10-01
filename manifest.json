@@ -1,9 +1,1 @@
-{
-  "name":"Cricket Live Score V4",
-  "short_name":"Cricket Score",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#07111f",
-  "theme_color":"#07111f",
-  "description":"Real cricket score dashboard with match center, player stats, tournaments, news and smart alerts."
-}
+{"name":"Cricket Live Score V8","short_name":"Cricket Score","start_url":"./","display":"standalone","background_color":"#07111f","theme_color":"#07111f","description":"Fast cricket live scores with match centre and free API integration."}

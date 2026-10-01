@@ -1,25 +1,23 @@
-CRICKET LIVE SCORE V4 — API SETUP
+CRICKET LIVE SCORE V8 — VERY SIMPLE SETUP
 
-1) Free API key lo:
-   https://cricketliveapi.com/register
+1) Root folder me api-key.js file already hai.
+2) api-key.js open karo.
+3) Is line me quotes ke andar apni FREE CricketData API key paste karo:
+   export const CRICKETDATA_API_KEY = 'PASTE_KEY_HERE';
+4) Save karo.
+5) Deploy/restart karo.
 
-2) Apni key ko server environment me set karo.
-   Linux / Mac:
-   export CRICLIVE_API_KEY="YOUR_KEY"
+api-key.js kaha hai?
+Ye index.html ke same level par hai:
+cricket-v8/
+  index.html
+  api-key.js   <-- YAHAN KEY PASTE KARNI HAI
+  app.js
+  styles.css
+  server.mjs
+  api/
 
-   Windows PowerShell:
-   $env:CRICLIVE_API_KEY="YOUR_KEY"
-
-3) App run karo:
-   npm start
-
-4) Browser me kholo:
-   http://localhost:8080
-
-IMPORTANT:
-- Real API key ko app.js me mat daalna.
-- GitHub repo me real key commit mat karna.
-- Vercel use karoge to Environment Variable me CRICLIVE_API_KEY add karo.
-- Free tier ka quota provider ke account/key par hota hai.
-
-Agar key configure nahi hogi to app crash nahi karega; demo data dikhega aur "Demo / Offline" status show hoga.
+SECURITY:
+Agar GitHub repo PUBLIC hai to real key api-key.js me commit mat karo.
+Vercel Dashboard > Settings > Environment Variables > CRICKETDATA_API_KEY me key dalo.
+Private repo me file method use kar sakte ho.

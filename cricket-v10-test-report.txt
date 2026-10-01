@@ -1,0 +1,24 @@
+CRICKET LIVE SCORE V10 TEST REPORT
+
+Round 1 — functional/API normalization
+PASS: Live match classification
+PASS: Recent/completed result classification
+PASS: Upcoming fixture classification
+PASS: Results bucket parsing
+PASS: Live + Recent + Upcoming ordering
+PASS: Backend health endpoint
+PASS: CricketData cricScore proxy
+PASS: API cache HIT behavior
+PASS: currentMatches endpoint
+PASS: api-key.js blocked by server
+
+Round 2 — static/security/regression
+PASS: JS syntax checks
+PASS: Required files present
+PASS: API key reference is isolated to api-key.js/direct fallback
+PASS: Service Worker bypasses /api routes
+PASS: API key file route blocked by server
+PASS: HTML script references
+
+Provider connectivity note:
+The container test environment could not resolve api.cricapi.com (DNS/network limitation), so a real provider response could not be fetched from this runtime. The integration was tested end-to-end against a local provider mock matching the documented CricketData response shape.

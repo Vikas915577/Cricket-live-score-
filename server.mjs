@@ -31,4 +31,4 @@ const server=http.createServer(async(req,res)=>{try{const u=new URL(req.url,`htt
  if(rel==='api-key.js'||rel==='server.mjs'||rel.startsWith('api/'))return send(res,403,{error:'Forbidden'});
  const filePath=path.resolve(__dirname,rel);if(filePath!==__dirname&&!filePath.startsWith(__dirname+path.sep))return send(res,403,{error:'Forbidden'});const data=await fs.readFile(filePath);return send(res,200,data,mime[path.extname(filePath)]||'application/octet-stream');
  }catch(e){return send(res,404,{error:'Not found'})}});
-server.listen(port,()=>console.log(`Cricket Live Score V8 running at http://localhost:${port}`));
+server.listen(port,()=>console.log(`Cricket Live Score V10 running at http://localhost:${port}`));

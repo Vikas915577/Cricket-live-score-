@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 const FILE_KEY = (()=>{try{const s=fs.readFileSync(path.join(process.cwd(),'api-key.js'),'utf8');const m=s.match(/CRICKETDATA_API_KEY\s*=\s*['\"]([^'\"]*)['\"]/);return String(m?.[1]||'').trim()}catch{return ''}})();
 
-const cache = globalThis.__cricketV8Cache || (globalThis.__cricketV8Cache = new Map());
+const cache = globalThis.__cricketV10Cache || (globalThis.__cricketV8Cache = new Map());
 const BASE = process.env.CRICKETDATA_BASE_URL || 'https://api.cricapi.com/v1';
 const MATCH_TTL = Number(process.env.CRICKET_MATCH_TTL_MS || 180000);
 const DETAIL_TTL = Number(process.env.CRICKET_DETAIL_TTL_MS || 900000);

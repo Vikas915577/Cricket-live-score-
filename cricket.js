@@ -1,4 +1,6 @@
-import { CRICKETDATA_API_KEY as FILE_KEY } from '../api-key.js';
+import fs from 'node:fs';
+import path from 'node:path';
+const FILE_KEY = (()=>{try{const s=fs.readFileSync(path.join(process.cwd(),'api-key.js'),'utf8');const m=s.match(/CRICKETDATA_API_KEY\s*=\s*['\"]([^'\"]*)['\"]/);return String(m?.[1]||'').trim()}catch{return ''}})();
 
 const cache = globalThis.__cricketV8Cache || (globalThis.__cricketV8Cache = new Map());
 const BASE = process.env.CRICKETDATA_BASE_URL || 'https://api.cricapi.com/v1';

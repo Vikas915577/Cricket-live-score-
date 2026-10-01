@@ -14,4 +14,4 @@ await check('missing scorecard id',async()=>{const r=await req('http://127.0.0.1
 await check('invalid type',async()=>{const r=await req('http://127.0.0.1:8098/api/cricket?type=bad');if(r.status!==400)throw Error('expected 400')});
 await check('api key file blocked',async()=>{const r=await req('http://127.0.0.1:8098/api-key.js');if(r.status!==403)throw Error(`expected 403 got ${r.status}`)});
 await check('forced refresh',async()=>{const r=await req('http://127.0.0.1:8098/api/cricket?type=matches&refresh=1');if(r.headers['x-cricket-cache']!=='MISS')throw Error('expected MISS')});
-app.kill();provider.close();if(failures)process.exit(1);console.log('ALL V8 ROUND-1 TESTS PASSED');
+app.kill();provider.close();if(failures)process.exit(1);console.log('ALL V9 ROUND-1 TESTS PASSED');

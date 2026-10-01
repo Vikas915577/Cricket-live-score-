@@ -2,9 +2,9 @@ import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {CRICKETDATA_API_KEY as FILE_KEY} from './api-key.js';
-
 const __dirname=path.dirname(fileURLToPath(import.meta.url));
+async function readFileKey(){try{const s=await fs.readFile(path.join(__dirname,'api-key.js'),'utf8');const m=s.match(/CRICKETDATA_API_KEY\s*=\s*['\"]([^'\"]*)['\"]/);return String(m?.[1]||'').trim()}catch{return ''}}
+let FILE_KEY=await readFileKey();
 const port=Number(process.env.PORT||8080);
 const BASE=process.env.CRICKETDATA_BASE_URL||'https://api.cricapi.com/v1';
 const apiKey=String(process.env.CRICKETDATA_API_KEY||FILE_KEY||'').trim();

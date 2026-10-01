@@ -8,4 +8,4 @@ if(/CRICKETDATA_API_KEY\s*=|apikey=[A-Za-z0-9_-]{10,}/i.test(app))throw new Erro
 const sw=fs.readFileSync('sw.js','utf8');
 if(!sw.includes("u.pathname.startsWith('/api/')"))throw new Error('service worker API bypass missing');
 if(!fs.readFileSync('server.mjs','utf8').includes("rel==='api-key.js'"))throw new Error('api-key route block missing');
-console.log('ROUND-2 STATIC/SECURITY TESTS PASSED');
+console.log('V9 ROUND-2 STATIC/SECURITY TESTS PASSED');

@@ -1,23 +1,7 @@
-CRICKET LIVE SCORE V8 — VERY SIMPLE SETUP
+CRICKET LIVE SCORE V9
 
-1) Root folder me api-key.js file already hai.
-2) api-key.js open karo.
-3) Is line me quotes ke andar apni FREE CricketData API key paste karo:
-   export const CRICKETDATA_API_KEY = 'PASTE_KEY_HERE';
-4) Save karo.
-5) Deploy/restart karo.
-
-api-key.js kaha hai?
-Ye index.html ke same level par hai:
-cricket-v8/
-  index.html
-  api-key.js   <-- YAHAN KEY PASTE KARNI HAI
-  app.js
-  styles.css
-  server.mjs
-  api/
-
-SECURITY:
-Agar GitHub repo PUBLIC hai to real key api-key.js me commit mat karo.
-Vercel Dashboard > Settings > Environment Variables > CRICKETDATA_API_KEY me key dalo.
-Private repo me file method use kar sakte ho.
+1. Unzip this folder.
+2. If using GitHub Pages/static hosting: open api-key.js and replace the empty string with your CricketData API key. NOTE: this exposes the key publicly.
+3. If using Vercel/server: prefer Environment Variable CRICKETDATA_API_KEY instead.
+4. Open the site and tap Refresh.
+5. Recent Results now reads result buckets robustly and sorts completed matches.
